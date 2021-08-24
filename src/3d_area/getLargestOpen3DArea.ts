@@ -1,4 +1,4 @@
-import { getAdjacentOpenAreaPositionsForGivenPosition } from './helpers/getAdjacentZeroPositionListForPosition';
+import { getAdjacentOpenAreaPositionsFor3D } from './getAdjacentOpenAreaPositionsFor3D';
 
 export function getLargestArea(structure: number[][][]): number {
   /*
@@ -46,7 +46,7 @@ export function getLargestArea(structure: number[][][]): number {
 
               const [firstPosition, secondPosition, thirdPosition] = listOfUniqueAdjacentOpenAreaPositions[i].split(',', 3);
 
-              const foundOpenAreaPositions: Array<string> = getAdjacentOpenAreaPositionsForGivenPosition(
+              const foundOpenAreaPositions: Array<string> = getAdjacentOpenAreaPositionsFor3D(
                 structure,
                 parseInt(firstPosition, 10),
                 parseInt(secondPosition, 10),
